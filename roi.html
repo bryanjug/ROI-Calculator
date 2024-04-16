@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/slider.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Profit Calculator</title>
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="button-container">
+      <div class="button-list">
+        <div class="button" id="button1">
+          <div class="icon">$</div>
+          <div class="button-text">Glasses Per Month</div>
+        </div>
+        <div class="button" id="button2">
+          <div class="icon">$</div>
+          <div class="button-text">Cost Per Glass</div>
+        </div>
+        <div class="button" id="button3">
+          <div class="icon">$</div>
+          <div class="button-text">Labor</div>
+        </div>
+        <div class="button" id="button4">
+          <div class="icon">$</div>
+          <div class="button-text">Sales Price</div>
+        </div>
+      </div>
+    </div>
+    <div class="sales">
+      <div class="section-title">Your Sales</div>
+	    <div class="inputs">
+        <div class="input-group">
+          <label for="glassesPerMonth">Glasses Per Month: <span id="glassesPerMonthValue">2000</span></label>
+          <input class="win10-thumb" type="range" id="glassesPerMonth" name="glassesPerMonth" min="0" max="4000" step="100" value="1200" oninput="updateDisplay('glassesPerMonth', 'glassesPerMonthValue')">
+        </div>
+        <div class="input-group">
+          <label for="costPerGlass">Cost Per Glass: $<span id="costPerGlassValue">20</span></label>
+          <input class="win10-thumb" type="range" id="costPerGlass" name="costPerGlass" min="0" max="40" step="1" value="3" oninput="updateDisplay('costPerGlass', 'costPerGlassValue')">
+        </div>
+        <div class="input-group">
+          <label for="labor">Labor: <span id="laborValue">12</span> hrs</label>
+          <input class="win10-thumb" type="range" id="labor" name="labor" min="0" max="24" step="1" value="4" oninput="updateDisplay('labor', 'laborValue')">
+        </div>
+        <div class="input-group">
+          <label for="btgPrice">Sales Price: $<span id="btgPriceValue">$20</span></label>
+          <input class="win10-thumb" type="range" id="btgPrice" name="btgPrice" min="0" max="40" step="1" value="16" oninput="updateDisplay('btgPrice', 'btgPriceValue')">
+        </div>
+      </div>
+    </div>
+    <div class="profits"> 
+      <!-- use barlow font, make profits section one column, and add commas to numbers, make pasmosa numbers bold -->
+      <div class="section-title" id="profitsTitle">Profits</div>
+      <h2 class="profit-label" id="yourProfit">Your Profit</h2>
+      <div class="netProfits">
+        <div>
+          <p class="time">Monthly</p>
+          <div class="profit-value"><span id="yourProfitMonthly">$1110</span></div>  
+        </div>
+        <div>
+          <p class="time">Yearly</p>
+          <div class="profit-value"><span id="yourProfitYearly">$1110</span></div>
+        </div>
+      </div>
+      <hr>
+      <h2 class="profit-label">Pasmosa Profit</h2>
+      <div class="netProfits">
+        <div>
+          <p class="time">Monthly</p>
+          <div class="profit-value"><span id="pasmosaProfitMonthly">$1110</span></div>
+        </div>
+        <div>
+          <p class="time">Yearly</p>
+          <div class="profit-value"><span id="pasmosaProfitYearly">$1110</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="section-title">Profits</div>
+      <div class="columns">
+        <div>
+          <h2 class="profit-label">Your Profit</h2>
+          <div class="netProfits">
+            <div>
+              <p class="time">Monthly</p>
+              <div class="profit-value"><span id="yourProfitMonthly2">$1110</span></div>  
+            </div>
+            <div>
+              <p class="time">Yearly</p>
+              <div class="profit-value"><span id="yourProfitYearly2">$1110</span></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="profit-label">Pasmosa Profit</h2>
+          <div class="netProfits">
+            <div>
+              <p class="time">Monthly</p>
+              <div class="profit-value"><span id="pasmosaProfitMonthly2">$1110</span></div>
+            </div>
+            <div>
+              <p class="time">Yearly</p>
+              <div class="profit-value"><span id="pasmosaProfitYearly2">$1110</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
