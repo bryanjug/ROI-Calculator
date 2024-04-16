@@ -25,12 +25,17 @@ body {
 }
 .profits {
     padding-top: 25px;
-    background-color: #d5e4f3;
+    background-color: #F16670;
     text-align: center;
     height: 525px;
     width: 475px;
     border-radius: 30px 30px 30px 30px;
+    color: white;
 }
+.profits hr {
+    background-color: white;
+}
+
 .profit-label {
     font: 25px 'Barlow', 'arial';
     font-weight: 300;
