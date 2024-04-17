@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
       var netProfitYearly = totalNetProfit * 12;
       
       // Update the "Your Profit" value display
-      document.getElementById('yourProfitMonthly').textContent = "$" + netProfitMonthly;
-      document.getElementById('yourProfitYearly').textContent = "$" + netProfitYearly;
-      document.getElementById('yourProfitMonthly2').textContent = "$" + netProfitMonthly;
-      document.getElementById('yourProfitYearly2').textContent = "$" + netProfitYearly;
+      document.getElementById('yourProfitMonthly').textContent = "$" + netProfitMonthly.toLocaleString();
+      document.getElementById('yourProfitYearly').textContent = "$" + netProfitYearly.toLocaleString();
+      document.getElementById('yourProfitMonthly2').textContent = "$" + netProfitMonthly.toLocaleString();
+      document.getElementById('yourProfitYearly2').textContent = "$" + netProfitYearly.toLocaleString();
 
       //Calculate the "Pasmosa Profit" value
       var totalCostPasmosa = (glassesPerMonth * 1.80) + 0;
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
       var netProfitYearlyPasmosa = totalNetProfitPasmosa * 12;
 
       // Update the "Your Profit" value display
-      document.getElementById('pasmosaProfitMonthly').textContent = "$" + netProfitMonthlyPasmosa;
-      document.getElementById('pasmosaProfitYearly').textContent = "$" + netProfitYearlyPasmosa;
-      document.getElementById('pasmosaProfitMonthly2').textContent = "$" + netProfitMonthlyPasmosa;
-      document.getElementById('pasmosaProfitYearly2').textContent = "$" + netProfitYearlyPasmosa;
+      document.getElementById('pasmosaProfitMonthly').textContent = "$" + netProfitMonthlyPasmosa.toLocaleString();
+      document.getElementById('pasmosaProfitYearly').textContent = "$" + netProfitYearlyPasmosa.toLocaleString();
+      document.getElementById('pasmosaProfitMonthly2').textContent = "$" + netProfitMonthlyPasmosa.toLocaleString();
+      document.getElementById('pasmosaProfitYearly2').textContent = "$" + netProfitYearlyPasmosa.toLocaleString();
     }
   
     // Attach input event listeners to sliders
